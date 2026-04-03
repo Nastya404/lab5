@@ -9,6 +9,16 @@
             (unsigned long)word.length];
 }
 
+- (NSString *)readLineFromConsole {
+    char buffer[256];
+    if (fgets(buffer, sizeof(buffer), stdin)) {
+        NSString *line = [NSString stringWithUTF8String:buffer];
+        return [line stringByTrimmingCharactersInSet:
+                [NSCharacterSet newlineCharacterSet]];
+    }
+    return @"";
+}
+
 - (void)printArray:(NSArray *)array withTitle:(NSString *)title {
     NSLog(@"\n%@:", title);
     for (NSUInteger i = 0; i < array.count; i++) {
@@ -26,57 +36,64 @@
 }
 
 - (void)demonstrateImmutableArray {
-    NSLog(@"\n========== НЕИЗМЕНЯЕМЫЙ МАССИВ ==========");
-    
+    NSLog(@"\nНЕИЗМЕНЯЕМЫЙ МАССИВ NSArray");
+
     // а) Вывод массива
     NSArray *words = @[@"cat", @"dog", @"elephant", @"ant", @"bee"];
-    [self printArray:words withTitle:@"Исходный массив"];
-    
-    // Сортировка по длине
-    NSArray *sorted = [self sortByLength:words];
-    [self printArray:sorted withTitle:@"Отсортированный по длине"];
-    
+    [self printArray:words withTitle:@"а) Исходный массив"];
+
     // г) Подсчет количества элементов
-    NSLog(@"\nКоличество элементов: %lu", (unsigned long)words.count);
+    NSLog(@"\nг) Количество элементов в NSArray: %lu",
+          (unsigned long)words.count);
+
+    // Сортировка по длине (индивидуальное задание)
+    NSArray *sorted = [self sortByLength:words];
+    [self printArray:sorted withTitle:@"Отсортированный по длине строк"];
 }
 
+// Изменяемый массив
 - (void)demonstrateMutableArray {
-    NSLog(@"\n========== ИЗМЕНЯЕМЫЙ МАССИВ ==========");
-    
+    NSLog(@"\nИЗМЕНЯЕМЫЙ МАССИВ NSMutableArray");
+
     // б) Создание пустого изменяемого массива
     NSMutableArray *mutableWords = [NSMutableArray array];
-    NSLog(@"\nСоздан пустой изменяемый массив");
-    
-    // в) Ввод элементов
-    [mutableWords addObject:@"cat"];
-    [mutableWords addObject:@"dog"];
-    [mutableWords addObject:@"elephant"];
-    [mutableWords addObject:@"ant"];
-    [mutableWords addObject:@"bee"];
-    [self printArray:mutableWords withTitle:@"После добавления элементов"];
-    
+    NSLog(@"\nб) Создан пустой NSMutableArray");
+    NSLog(@"Количество элементов: %lu", (unsigned long)mutableWords.count);
+
+    // в) Ввод элементов с консоли
+    NSLog(@"\nв) Введите 5 слов (каждое с новой строки):");
+    for (int i = 0; i < 5; i++) {
+        printf("Слово %d: ", i + 1);
+        NSString *word = [self readLineFromConsole];
+        if (word.length > 0) {
+            [mutableWords addObject:word];
+        }
+    }
+    [self printArray:mutableWords withTitle:@"Массив после ввода с консоли"];
+
+    // г) Подсчет количества элементов
+    NSLog(@"\nг) Количество элементов в NSMutableArray: %lu",
+          (unsigned long)mutableWords.count);
+
     // д) Добавление элемента
     [mutableWords addObject:@"fox"];
-    [self printArray:mutableWords withTitle:@"После добавления 'fox'"];
-    
-    // е) Вставка по индексу
+    [self printArray:mutableWords withTitle:@"д) После добавления 'fox'"];
+
+    // е) Вставка элемента по индексу
     [mutableWords insertObject:@"owl" atIndex:2];
-    [self printArray:mutableWords withTitle:@"После вставки 'owl' по индексу 2"];
-    
+    [self printArray:mutableWords withTitle:@"е) После вставки 'owl' по индексу 2"];
+
     // ё) Удаление последнего элемента
     [mutableWords removeLastObject];
-    [self printArray:mutableWords withTitle:@"После удаления последнего элемента"];
-    
-    // ж) Удаление по индексу
+    [self printArray:mutableWords withTitle:@"ё) После удаления последнего элемента"];
+
+    // ж) Удаление элемента по индексу
     [mutableWords removeObjectAtIndex:0];
-    [self printArray:mutableWords withTitle:@"После удаления элемента по индексу 0"];
-    
-    // г) Подсчет количества элементов
-    NSLog(@"\nКоличество элементов: %lu", (unsigned long)mutableWords.count);
-    
+    [self printArray:mutableWords withTitle:@"ж) После удаления элемента по индексу 0"];
+
     // з) Удаление всех элементов
     [mutableWords removeAllObjects];
-    NSLog(@"\nПосле удаления всех элементов:");
+    NSLog(@"\nз) После удаления всех элементов:");
     NSLog(@"Количество элементов: %lu", (unsigned long)mutableWords.count);
 }
 
