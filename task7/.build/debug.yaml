@@ -1,0 +1,146 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "TestsTask7-x86_64-apple-macosx15.0-debug.module": ["<TestsTask7-x86_64-apple-macosx15.0-debug.module>"]
+  "main": ["<task7-x86_64-apple-macosx15.0-debug.exe>","<task7-x86_64-apple-macosx15.0-debug.module>"]
+  "task7-x86_64-apple-macosx15.0-debug.exe": ["<task7-x86_64-apple-macosx15.0-debug.exe>"]
+  "task7-x86_64-apple-macosx15.0-debug.module": ["<task7-x86_64-apple-macosx15.0-debug.module>"]
+  "task7PackageTests-x86_64-apple-macosx15.0-debug.module": ["<task7PackageTests-x86_64-apple-macosx15.0-debug.module>"]
+  "task7PackageTests-x86_64-apple-macosx15.0-debug.test": ["<task7PackageTests-x86_64-apple-macosx15.0-debug.test>"]
+  "test": ["<TestsTask7-x86_64-apple-macosx15.0-debug.module>","<task7-x86_64-apple-macosx15.0-debug.exe>","<task7-x86_64-apple-macosx15.0-debug.module>","<task7PackageTests-x86_64-apple-macosx15.0-debug.test>"]
+default: "main"
+nodes:
+  "/Users/anastasiyayarmolik/lab5/task7/Sources/task7/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/anastasiyayarmolik/lab5/task7/Tests/TestsTask7/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7":
+    is-mutated: true
+commands:
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/anastasiyayarmolik/lab5/task7/Tests/TestsTask7/TestsTask7.swift"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/sources"]
+    description: "Write auxiliary file /Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/sources"
+
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7-entitlement.plist"]
+    description: "Write auxiliary file /Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7-entitlement.plist"
+
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/ArraySplitter.swift","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Controllers/ArrayController.swift","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Models/ArrayModel.swift","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Views/ArrayView.swift","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/main.swift"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/sources"]
+    description: "Write auxiliary file /Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/sources"
+
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.swift.o"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.product/Objects.LinkFileList"
+
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.derived/runner.swift"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/sources"]
+    description: "Write auxiliary file /Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/sources"
+
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.derived/runner.swift":
+    tool: test-entry-point-tool
+    inputs: []
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.derived/runner.swift"]
+
+  "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/runner.swift.o"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.product/Objects.LinkFileList"
+
+  "<TestsTask7-x86_64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/TestsTask7.swiftmodule"]
+    outputs: ["<TestsTask7-x86_64-apple-macosx15.0-debug.module>"]
+
+  "<task7-x86_64-apple-macosx15.0-debug.exe>":
+    tool: phony
+    inputs: ["<task7-x86_64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    outputs: ["<task7-x86_64-apple-macosx15.0-debug.exe>"]
+
+  "<task7-x86_64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7.swiftmodule"]
+    outputs: ["<task7-x86_64-apple-macosx15.0-debug.module>"]
+
+  "<task7PackageTests-x86_64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/runner.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7PackageTests.swiftmodule"]
+    outputs: ["<task7PackageTests-x86_64-apple-macosx15.0-debug.module>"]
+
+  "<task7PackageTests-x86_64-apple-macosx15.0-debug.test>":
+    tool: phony
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.xctest/Contents/MacOS/task7PackageTests"]
+    outputs: ["<task7PackageTests-x86_64-apple-macosx15.0-debug.test>"]
+
+  "C.TestsTask7-x86_64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/Tests/TestsTask7/TestsTask7.swift","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/sources"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/TestsTask7.swiftmodule"]
+    description: "Compiling Swift Module 'TestsTask7' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","TestsTask7","-emit-dependencies","-emit-module","-emit-module-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/TestsTask7.swiftmodule","-output-file-map","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/sources","-I","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j4","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-color-diagnostics","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","task7"]
+
+  "C.task7-x86_64-apple-macosx15.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.product/Objects.LinkFileList"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/task7"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug","-o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7","-module-name","task7","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_task7_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-5.5/macosx","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","x86_64-apple-macosx10.13","-Xlinker","-add_ast_path","-Xlinker","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.task7-x86_64-apple-macosx15.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7-entitlement.plist"]
+    outputs: ["<task7-x86_64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/x86_64-apple-macosx/debug/task7"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7-entitlement.plist","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7"]
+
+  "C.task7-x86_64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/Sources/task7/ArraySplitter.swift","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Controllers/ArrayController.swift","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Models/ArrayModel.swift","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Views/ArrayView.swift","/Users/anastasiyayarmolik/lab5/task7/Sources/task7/main.swift","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/sources"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7.swiftmodule"]
+    description: "Compiling Swift Module 'task7' (5 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","task7","-emit-dependencies","-emit-module","-emit-module-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7.swiftmodule","-output-file-map","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/output-file-map.json","-incremental","-c","@/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/sources","-I","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j4","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","task7_main","-color-diagnostics","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","task7"]
+
+  "C.task7PackageTests-x86_64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.derived/runner.swift","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/TestsTask7.swiftmodule","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/sources"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/runner.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7PackageTests.swiftmodule"]
+    description: "Compiling Swift Module 'task7PackageTests' (1 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","task7PackageTests","-emit-dependencies","-emit-module","-emit-module-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7PackageTests.swiftmodule","-output-file-map","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/sources","-I","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules","-target","x86_64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/index/store","-Onone","-enable-testing","-Xfrontend","-enable-cross-import-overlays","-j4","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/include/task7PackageTests-Swift.h","-color-diagnostics","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","task7"]
+
+  "C.task7PackageTests-x86_64-apple-macosx15.0-debug.test":
+    tool: shell
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.build/runner.swift.o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.product/Objects.LinkFileList"]
+    outputs: ["/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.xctest/Contents/MacOS/task7PackageTests"]
+    description: "Linking ./.build/x86_64-apple-macosx/debug/task7PackageTests.xctest/Contents/MacOS/task7PackageTests"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug","-o","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.xctest/Contents/MacOS/task7PackageTests","-module-name","task7PackageTests","-Xlinker","-no_warn_duplicate_libraries","-Xlinker","-bundle","-Xlinker","-rpath","-Xlinker","@loader_path/../../../","@/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7PackageTests.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","x86_64-apple-macosx14.0","-Xlinker","-add_ast_path","-Xlinker","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/TestsTask7.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/Modules/task7PackageTests.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/anastasiyayarmolik/lab5/task7/Sources/task7/","/Users/anastasiyayarmolik/lab5/task7/Tests/TestsTask7/","/Users/anastasiyayarmolik/lab5/task7/Package.swift","/Users/anastasiyayarmolik/lab5/task7/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

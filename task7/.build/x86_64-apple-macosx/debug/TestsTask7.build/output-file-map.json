@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/master.swiftdeps"
+  },
+  "/Users/anastasiyayarmolik/lab5/task7/Tests/TestsTask7/TestsTask7.swift": {
+    "dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7.d",
+    "object": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7.swift.o",
+    "swiftmodule": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7~partial.swiftmodule",
+    "swift-dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7.swiftdeps",
+    "diagnostics": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/TestsTask7.build/TestsTask7.dia"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "": {
+    "swift-dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/master.swiftdeps"
+  },
+  "/Users/anastasiyayarmolik/lab5/task7/Sources/task7/ArraySplitter.swift": {
+    "dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.d",
+    "object": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.swift.o",
+    "swiftmodule": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter~partial.swiftmodule",
+    "swift-dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.swiftdeps",
+    "diagnostics": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArraySplitter.dia"
+  },
+  "/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Controllers/ArrayController.swift": {
+    "dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.d",
+    "object": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.swift.o",
+    "swiftmodule": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController~partial.swiftmodule",
+    "swift-dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.swiftdeps",
+    "diagnostics": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayController.dia"
+  },
+  "/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Models/ArrayModel.swift": {
+    "dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.d",
+    "object": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.swift.o",
+    "swiftmodule": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.swiftdeps",
+    "diagnostics": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayModel.dia"
+  },
+  "/Users/anastasiyayarmolik/lab5/task7/Sources/task7/Views/ArrayView.swift": {
+    "dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.d",
+    "object": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.swift.o",
+    "swiftmodule": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView~partial.swiftmodule",
+    "swift-dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.swiftdeps",
+    "diagnostics": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/ArrayView.dia"
+  },
+  "/Users/anastasiyayarmolik/lab5/task7/Sources/task7/main.swift": {
+    "dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.d",
+    "object": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.swift.o",
+    "swiftmodule": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.swiftdeps",
+    "diagnostics": "/Users/anastasiyayarmolik/lab5/task7/.build/x86_64-apple-macosx/debug/task7.build/main.dia"
+  }
+}
