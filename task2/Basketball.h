@@ -5,9 +5,7 @@
 @property (nonatomic, assign) NSInteger team1Time;
 @property (nonatomic, assign) NSInteger team2Time;
 
-- (void)addPenalty:(NSInteger)minutes;
-           forTeam:(NSInteger)team;
-              type:(NSString *)type;
+- (void)addPenalty:(NSInteger)minutes forTeam:(NSInteger)team type:(NSString *)type;
 - (void)printCurrentScore;
 - (void)printFinalResult;
 
